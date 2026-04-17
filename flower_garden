@@ -1,0 +1,28 @@
+class Flower:
+    def __init__(self, name, petals, color, height):
+        self.name = name
+        self.petals = petals
+        self.color = color
+        self.height = height
+
+    def describe(self):
+        return f"{self.name} is {self.color}, has {self.petals} petals, and is {self.height} cm tall."
+
+    def grow(self, amount):
+        self.height += amount
+
+
+rose = Flower("rose", 37, "red", 15)
+tulip = Flower("tulip", 12, "yellow", 11)
+daisy = Flower("daisy", 23, "white", 45)
+lily = Flower("lily", 19, "lilac", 7)
+
+
+print()
+flowers = rose, tulip, daisy, lily
+for flower in flowers:
+    print()
+    print(flower.describe())
+    flower.grow(5)
+    print("After growing: ")
+    print(flower.describe())
